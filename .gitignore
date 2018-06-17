@@ -2,3 +2,4 @@
 .chef/ca_certs
 Berksfile.lock
 .kitchen
+.chef/syntax_check_cache/
