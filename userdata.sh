@@ -9,7 +9,8 @@ REGION="us-east-1" # Region of your Chef Server (Choose one of our supported reg
 # optional
 CHEF_ORGANIZATION="default"    # AWS OpsWorks for Chef Server always creates the organization "default"
 NODE_ENVIRONMENT=""            # E.g. development, staging, onebox ...
-CHEF_CLIENT_VERSION="13.8.5" # latest if empty
+CHEF_CLIENT_VERSION="" # latest if empty
+# CHEF_CLIENT_VERSION="13.8.5" # latest if empty
 
 # recommended: upload the chef-client cookbook from the chef supermarket  https://supermarket.chef.io/cookbooks/chef-client
 # Use this to apply sensible default settings for your chef-client config like logrotate and running as a service
