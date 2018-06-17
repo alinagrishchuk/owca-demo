@@ -1,5 +1,5 @@
-.chef/*.pem
-.chef/ca_certs
+.chef*/*.pem
+.chef*/ca_certs
 Berksfile.lock
 .kitchen
-.chef/syntax_check_cache/
+.chef*/syntax_check_cache/
