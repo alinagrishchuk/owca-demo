@@ -1,0 +1,4 @@
+.chef/*.pem
+.chef/ca_certs
+Berksfile.lock
+.kitchen
