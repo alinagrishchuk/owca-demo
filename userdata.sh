@@ -2,15 +2,14 @@
 
 # required settings
 NODE_NAME="$(curl --silent --show-error --retry 3 http://169.254.169.254/latest/meta-data/instance-id)" # this uses the EC2 instance ID as the node name
-CHEF_SERVER_NAME="nathen-meetup" # The name of your Chef Server
-CHEF_SERVER_ENDPOINT="nathen-meetup-uckmpomgrecjhaj9.us-east-1.opsworks-cm.io" # The FQDN of your Chef Server
+CHEF_SERVER_NAME="nathen-demo" # The name of your Chef Server
+CHEF_SERVER_ENDPOINT="nathen-demo-ivzgr3tetpbyb4tm.us-east-1.opsworks-cm.io" # The FQDN of your Chef Server
 REGION="us-east-1" # Region of your Chef Server (Choose one of our supported regions - us-east-1, us-east-2, us-west-1, us-west-2, eu-central-1, eu-west-1, ap-northeast-1, ap-southeast-1, ap-southeast-2)
 
 # optional
 CHEF_ORGANIZATION="default"    # AWS OpsWorks for Chef Server always creates the organization "default"
 NODE_ENVIRONMENT=""            # E.g. development, staging, onebox ...
 CHEF_CLIENT_VERSION="" # latest if empty
-# CHEF_CLIENT_VERSION="13.8.5" # latest if empty
 
 # recommended: upload the chef-client cookbook from the chef supermarket  https://supermarket.chef.io/cookbooks/chef-client
 # Use this to apply sensible default settings for your chef-client config like logrotate and running as a service
