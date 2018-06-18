@@ -1,3 +1,25 @@
+# Set-up
+
+1.  Launch an OWCA using the AWS Console
+1.  Download the starter kit and credentials file (to ~/Downloads by default)
+1.  Run `setup.sh` in this directory specifying the Chef Automate server name (e.g. `setup.sh nathen-demo`)
+1.  `berks install`
+1.  `berks upload`
+1.  `knife upload roles/*`
+1.  Using the AWS Console, launch any number of AMIs using the IDs located in `amis.md`.  Specify the IAM role and the proper userdata based on OS.  NOTE:  only amazon, rhel, and ubuntu work at this time.
+1.  See the new nodes appear in Automate
+1.  The compliance tab is empty, download the ssh-baseline profile
+1.  Wait 2-4 mintues
+1.  See the compliance tab populate with failing nodes
+1.  Add the `ssh-hardening` cookbook to the role
+1.  Upload the role to the server
+1.  Wait 2-4 minutes
+1.  See fewer compliance failures
+1.  Newer version of the ssh-baseline controls will cause everything to pass.
+1.  Clone the dev-sec/ssh-baseline repo, `inspec archive ssh-baseline`, and upload that new compliance profile to the automate server.
+1.  Wait 2-4 minutes
+1.  See everything passing
+
 # Overview
 
 This zip file starts you out with a simple example of a Chef repository that is preconfigured to work with an AWS OpsWorks Chef Automate server.
