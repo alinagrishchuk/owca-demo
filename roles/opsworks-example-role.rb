@@ -3,5 +3,6 @@ description "This role specifies all recipes described in the starter kit guide 
 
 run_list(
   "recipe[my_chef_client]",
-  "recipe[my_audit]"
+  "recipe[my_audit]",
+  "recipe[ssh-hardening]"
 )
