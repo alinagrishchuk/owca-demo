@@ -2,8 +2,8 @@
 
 # required settings
 NODE_NAME="$(curl --silent --show-error --retry 3 http://169.254.169.254/latest/meta-data/instance-id)" # this uses the EC2 instance ID as the node name
-CHEF_SERVER_NAME="nathen-demo" # The name of your Chef Server
-CHEF_SERVER_ENDPOINT="nathen-demo-ivzgr3tetpbyb4tm.us-east-1.opsworks-cm.io" # The FQDN of your Chef Server
+CHEF_SERVER_NAME="cloud-devops-meetup" # The name of your Chef Server
+CHEF_SERVER_ENDPOINT="cloud-devops-meetup-9icetchh8trc0vn6.us-east-1.opsworks-cm.io" # The FQDN of your Chef Server
 REGION="us-east-1" # Region of your Chef Server (Choose one of our supported regions - us-east-1, us-east-2, us-west-1, us-west-2, eu-central-1, eu-west-1, ap-northeast-1, ap-southeast-1, ap-southeast-2)
 
 # optional
