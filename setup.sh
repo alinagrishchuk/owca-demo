@@ -12,6 +12,7 @@ fi
 OWCA_NAME=$1
 
 # Unzip the starter kit
+cp ~/Downloads/"$OWCA_NAME"_starter_kit.zip .
 unzip "$OWCA_NAME"_starter_kit.zip 
 mv "$OWCA_NAME"_starter_kit.zip ~/Downloads
 
@@ -30,3 +31,5 @@ sed -i '' "s/CHEF_SERVER_ENDPOINT=.*/$CHEF_SERVER_ENDPOINT/g" userdata-ubuntu.sh
 
 # Remove the unzipped files
 rm -rf $OWCA_NAME*/
+
+echo "The Admin password is `cat ~/Downloads/\"$OWCA_NAME\"_credentials.csv | cut -d ',' -f2`"
