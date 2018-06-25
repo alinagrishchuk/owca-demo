@@ -39,6 +39,11 @@ sed -i '' "s/CHEF_SERVER_ENDPOINT=.*/$CHEF_SERVER_ENDPOINT/g" userdata.sh
 sed -i '' "s/CHEF_SERVER_ENDPOINT=.*/$CHEF_SERVER_ENDPOINT/g" userdata-rhel.sh
 sed -i '' "s/CHEF_SERVER_ENDPOINT=.*/$CHEF_SERVER_ENDPOINT/g" userdata-ubuntu.sh
 
+REGION=$(grep '^REGION' $OWCA_NAME*/userdata.sh)
+sed -i '' "s/REGION=.*/$REGION/g" userdata.sh
+sed -i '' "s/REGION=.*/$REGION/g" userdata-rhel.sh
+sed -i '' "s/REGION=.*/$REGION/g" userdata-ubuntu.sh
+
 # Remove the unzipped files
 echo "cleaning up..."
 rm -rf $OWCA_NAME-*/
