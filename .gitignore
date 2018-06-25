@@ -5,3 +5,4 @@ Berksfile.lock
 .chef*/syntax_check_cache/
 profiles/*.tar.gz
 profiles/**/*.lock
+password
